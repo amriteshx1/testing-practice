@@ -14,5 +14,15 @@ function capitalize(str){
     }
     return reverseStr;
   }
+
+  let calculator = {
+    add : (a, b) => a + b,
+    sub : (a, b) => a - b,
+    mul : (a, b) => a * b,
+    div : (a, b) => {
+        if(b == 0) return undefined;
+        return a / b;
+    }
+  }
   
-  module.exports = {capitalize, reverse};
+  module.exports = {capitalize, reverse, calculator};
