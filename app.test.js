@@ -1,4 +1,4 @@
-const {capitalize, reverse, calculator} = require('./app');
+const {capitalize, reverse, calculator, caesarCipher} = require('./app');
 
 describe('capitalize', () => {
   test('returns first capital letter', () =>{
@@ -39,5 +39,23 @@ describe('calculator', () => {
   });
   test('handles divide by 0', () => {
     expect(calculator.div(7,0)).toBe(undefined);
+  });
+});
+
+describe('caesarCipher', () => {
+  test('normal one', () => {
+    expect(caesarCipher('abc', 4)).toBe('efg');
+  });
+
+  test('ensure wrapping', () => {
+    expect(caesarCipher('xyz', 3)).toBe('abc')
+  });
+
+  test('test case preservation', () => {
+    expect(caesarCipher('HeLLo', 3)).toBe('KhOOr')
+  });
+
+  test('test punctuation', () => {
+    expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!')
   });
 });
