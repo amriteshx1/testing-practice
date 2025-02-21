@@ -1,4 +1,4 @@
-const {capitalize, reverse, calculator, caesarCipher} = require('./app');
+const {capitalize, reverse, calculator, caesarCipher, analyzeArray} = require('./app');
 
 describe('capitalize', () => {
   test('returns first capital letter', () =>{
@@ -57,5 +57,18 @@ describe('caesarCipher', () => {
 
   test('test punctuation', () => {
     expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!')
+  });
+});
+
+describe('analyzeArray', () => {
+  test('analyze an array of numbers', () => {
+    const obj = analyzeArray([1, 8, 3, 4, 2, 6]);
+
+    expect(obj).toEqual({
+      avg : 4,
+      min : 1,
+      max : 8,
+      len : 6
+    });
   });
 });
