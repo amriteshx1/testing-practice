@@ -11,4 +11,4 @@ This repository contains a set of JavaScript functions along with corresponding 
 
 - An `analyzeArray` function that returns the average, min, max, and length of a given array.
 
-This project follows Jest's testing methodology and uses ES6 modules with Babel. The goal is to gain hands-on experience in writing tests and ensuring code reliability.
+This project follows Jest's testing methodology. The goal is to gain hands-on experience in writing tests and ensuring code reliability.
