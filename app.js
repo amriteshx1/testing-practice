@@ -1,10 +1,18 @@
-function Capitalize(str){
-    for(let letter of str){
-        if(letter >= 'A' && letter <='Z'){
-            return letter;
+function capitalize(str){
+    for(let char of str){
+        if(char >= 'A' && char <='Z'){
+            return char;
         }
     }
     return null;
-}
-
-module.exports = Capitalize;
+  }
+  
+  function reverse(str){
+    let reverseStr = '';
+    for(let i = (str.length - 1); i>= 0; i--){
+        reverseStr += str.charAt(i);
+    }
+    return reverseStr;
+  }
+  
+  module.exports = {capitalize, reverse};
